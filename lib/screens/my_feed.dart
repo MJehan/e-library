@@ -121,36 +121,36 @@ class _MyProfileState extends State<MyProfile> {
                     Row(
                       children: <Widget>[
                         ButtonImage(title: "Algorithm", path: "images/algo.jpg",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ImageButton2(title: "Data Structure", path: "images/cpp.jpg",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ImageButton3(title: "Micro.", path: "images/mc.png",),
                       ],
                     ),
                     Row(
                       children: <Widget>[
                         ImageButton3(title: "Micro.", path: "images/mc.png",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ButtonImage(title: "Algorithm", path: "images/algo.jpg",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ImageButton2(title: "Data Structure", path: "images/cpp.jpg",),
                       ],
                     ),
                     Row(
                       children: <Widget>[
                         ButtonImage(title: "Algorithm", path: "images/algo.jpg",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ImageButton2(title: "Data Structure", path: "images/cpp.jpg",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ImageButton3(title: "Micro.", path: "images/mc.png",),
                       ],
                     ),
                     Row(
                       children: <Widget>[
                         ImageButton3(title: "Micro.", path: "images/mc.png",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ButtonImage(title: "Algorithm", path: "images/algo.jpg",),
-                        SizedBox(width: 20,),
+                        SizedBox(width: 10,),
                         ImageButton2(title: "Data Structure", path: "images/cpp.jpg",),
                       ],
                     ),

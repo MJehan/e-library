@@ -28,8 +28,8 @@ class ImageButton2 extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Ink.image(image: AssetImage(path),
-              height: 150,
-              width: 100,
+              height: MediaQuery.of(context).size.height* 0.20,
+              width: MediaQuery.of(context).size.width* 0.25,
               fit: BoxFit.cover,
             ),
             SizedBox(height: 6,),

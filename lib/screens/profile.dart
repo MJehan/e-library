@@ -10,6 +10,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../component/nav_drawer.dart';
 
+String _userName = '';
+String department = '';
+String regnum = '';
+String email = '';
+late User loggedInUser;
+final firebase = FirebaseFirestore.instance;
+final _auth = FirebaseAuth.instance;
+
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -19,21 +27,22 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  String _userName = '';
-  String department = '';
-  String regnum = '';
-  String email = '';
-  final firebase = FirebaseFirestore.instance;
-  final _auth = FirebaseAuth.instance;
+  @override
+  void initState()
+  {
+    getUserName();
+  }
 
-
-  getUserName() async {
+  getUserName()  {
     final CollectionReference userName = FirebaseFirestore.instance.collection('users');
     final String uid = _auth.currentUser!.uid;
-    await userName.doc(uid).get().then((DocumentSnapshot ) =>
-    _userName = DocumentSnapshot['name'],
+     userName.doc(uid).get().then((DocumentSnapshot ){
+      _userName = DocumentSnapshot['name'];
+      department = DocumentSnapshot['department'];
+      regnum = DocumentSnapshot['regnum'];
+      email = DocumentSnapshot['email'];
+    }
     );
-
     print('user:$_userName');
   }
 
@@ -80,10 +89,10 @@ class _ProfileState extends State<Profile> {
                   ),
                   Expanded(
                     child: Text(
-                      _userName,
+                      'Name:      $_userName\nS.Id:       $regnum\n Email:     $email',
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 20.00,
+                        fontSize: 15.00,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
